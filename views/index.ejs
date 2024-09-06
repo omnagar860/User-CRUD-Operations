@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="text-align: center;">Home Page</h1>
+  <div style="text-align: center;">
+    <%- include("nav")%>
+
+    <ul>
+      <%  users.forEach(user =>{  %>
+        <li><%= user.name %> |<a href="/delete/<%= user._id %>">Delete</a> | <a href="/update/<%= user._id%>">Update User</a></li>
+
+     <% }) %>
+    </ul>
+
+    <!-- <form  style="text-align: center;" action="">
+      <div style="margin-bottom: 10px; margin-top: 10px;">
+        <label for="">Name</label> <input type="text" name="name" placeholder="Enter Name" >
+      </div>
+      <div style="margin-bottom: 10px;">
+        <label for="">Email</label> <input type="email" name="email" placeholder="Enter Email" >
+      </div>
+      <div style="margin-bottom: 10px;"> 
+        <label for="">Password</label> <input type="password" name="password" placeholder="Enter password">
+      </div>
+
+      <button>Create New User</button>
+    </form> -->
+  </div>
+</body>
+</html>
